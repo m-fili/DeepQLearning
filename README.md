@@ -1,5 +1,7 @@
 # Training Banana Collector using DQN
 
+
+## 1. Introduction
 In this project, we'll train an agent using Deep Q-learning to collect as many yellow bananas 
 as possible in a large square environment.
 
@@ -13,3 +15,20 @@ and ray-based perception of objects in front of the agent.
   * 1: Backward 
   * 2: Left
   * 3: Right
+
+
+## 2. 
+
+
+
+
+
+
+
+
+
+
+
+
+This project is a part of
+[Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) program.
