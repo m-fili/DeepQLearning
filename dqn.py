@@ -6,7 +6,7 @@ import torch
 def dqn(env, agent, n_episodes=100, min_epsilon=0.05, epsilon_decay=0.999,
         update_target_frequency=10, update_main_frequency=2):
 
-    TARGET_SCORE = 200.0
+    TARGET_SCORE = 15.0
     epsilon = 1.0
 
     # counts the total steps (we use it to see when to train the main qnetwork and when to copy main to target.)
@@ -70,7 +70,7 @@ def dqn(env, agent, n_episodes=100, min_epsilon=0.05, epsilon_decay=0.999,
         if np.mean(scores_window) >= TARGET_SCORE:
             print(f"Agent reached target score in {episode} episodes! (Avg. Score = {np.mean(scores_window)})")
             # save main qnetwork
-            torch.save(agent.qnetwork.state_dict(), 'checkpoint.pth')
+            torch.save(agent.qnetwork.state_dict(), 'checkpoint01.pth')
             break
 
     return scores
