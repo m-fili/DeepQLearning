@@ -15,19 +15,17 @@ To optimize the weights, I used Adam optimizer with a learning rate of 0.0005.
 
 ## 3. Hyperparameters
 
-| **Parameter**           | **Value** |
-|:------------------------|:---------:|
-| Gamma                   |   0.99    |
-| $\epsilon_{initial}$    |    1.0    |
-| $\epsilon_{min}$        |   0.01    |
-| epsilon_decay           |   0.995   |
-| update_target_frequency |     4     |
-| update_main_frequency   |     4     |
-| epsilon_decay           |   0.995   |
-| buffer_size             |  100,000  |
-| batch_size              |    64     |
-| buffer_size             |  100,000  |
-| target_score            |   15.0    |
+| **Parameter**                   | **Value** |
+|:--------------------------------|:---------:|
+| $\gamma$                        |   0.99    |
+| $\epsilon_{initial}$            |    1.0    |
+| $\epsilon_{min}$                |   0.01    |
+| $\epsilon_{decay}$              |   0.995   |
+| target network update frequency |     4     |
+| main network update frequency   |     4     |
+| buffer size                     |  100,000  |
+| batch size                      |    64     |
+| target score                    |   15.0    |
 
 
 
