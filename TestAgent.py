@@ -45,9 +45,10 @@ env.close()
 print("Average Score in 100 consecutive episodes: {}".format(np.mean(scores)))
 
 
-plt.plot(range(1, 101), scores, color='blue', alpha=0.85)
-plt.hlines(y=np.mean(scores), xmin=1, xmax=100, linestyles='--', color='red', alpha=0.8)
+plt.plot(range(1, 101), scores, color='blue', alpha=0.85, label='rewards')
+plt.hlines(y=np.mean(scores), xmin=1, xmax=100, linestyles='--', color='red', alpha=0.8, label='Avg. Score')
 plt.title('Scores in 100 Episodes')
 plt.xlabel('Episode')
 plt.ylabel('Total Reward')
+plt.legend()
 plt.show()
