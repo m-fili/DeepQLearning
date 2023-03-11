@@ -18,15 +18,38 @@ and ray-based perception of objects in front of the agent.
   * 3: Right
 
 
-## 2. Installation on Windows
+## 2. Installation
+
+### 2.1. Environment
+First, you need to download the environment according to the Operating System:
+* Linux: [[Download]](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
+* Mac OS: [[Download]](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
+* Windows 64bit: [[Download]](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
+* Windows 32bit: [[Download]](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
+
+Then, place the file in the root directory where the `Navigation.ipynb` exists. 
 
 
+### 2.2. Python
+For this project, you need _Python 3.9.x._ Old Anaconda version could be found 
+[here](https://repo.anaconda.com/archive/).
+
+
+### 2.3. Dependencies
+You can download the packages needed using `requirements.txt` file:
+
+```
+pip install --upgrade pip
+pip install -r requirements.txt
+```
 
 ## 3. Training the Agent
 
+The training procedure is shown in `Navigation.ipynb`. Follow this notebook to 
+see how to train an agent to collect yellow bananas.
 
 ## 4. Visualizing the Agent
-To Visualize the agent, you can use ``
+To Visualize the agent, you can use `VisualizeAgent.py` file.
 
 
 
