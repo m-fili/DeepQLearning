@@ -30,4 +30,7 @@ n_episodes = 1800, min_epsilon = 0.05, epsilon_decay = 0.995,
 
 
 ### 4. Test for 100 Episodes
-Below
+The trained agent is evaluated on 100 episodes and the the output is shown
+in the figure below:
+
+<img src="Images/Test100Episodes.jpeg">
