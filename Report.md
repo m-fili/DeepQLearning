@@ -15,16 +15,20 @@ To optimize the weights, I used Adam optimizer with a learning rate of 0.0005.
 
 ## 3. Hyperparameters
 
-| **Parameter** | **Value** |
-|:--------------|:---------:|
-| Header        |   Title   |
-| Paragraph     |   Text    | 
+| **Parameter**           | **Value** |
+|:------------------------|:---------:|
+| Gamma                   |   0.99    |
+| $\epsilon_{initial}$    |    1.0    |
+| $\epsilon_{min}$        |   0.01    |
+| epsilon_decay           |   0.995   |
+| update_target_frequency |     4     |
+| update_main_frequency   |     4     |
+| epsilon_decay           |   0.995   |
+| buffer_size             |  100,000  |
+| batch_size              |    64     |
+| buffer_size             |  100,000  |
+| target_score            |   15.0    |
 
-
-
-n_episodes = 1800, min_epsilon = 0.05, epsilon_decay = 0.995, 
-        t_max = 10, epsilon = 1.0, update_target_frequency = 10, 
-        update_main_frequency = 2
 
 
 
@@ -36,7 +40,7 @@ in each episode during the training phase:
 
 
 
-### 4. Test for 100 Episodes
+### 5. Test for 100 Episodes
 The trained agent is evaluated on 100 episodes and the output is shown
 in the figure below:
 
