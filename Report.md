@@ -28,9 +28,23 @@ n_episodes = 1800, min_epsilon = 0.05, epsilon_decay = 0.995,
 
 
 
+### 4. Training the agent
+The agent exceeded the target score (15.0) in 687 episodes! Here is the scores collected
+in each episode during the training phase:
+
+<img src="Images/TrainingPlot.png" height="313">
+
+
 
 ### 4. Test for 100 Episodes
-The trained agent is evaluated on 100 episodes and the the output is shown
+The trained agent is evaluated on 100 episodes and the output is shown
 in the figure below:
 
-<img src="Images/Test100Episodes.jpeg">
+<img src="Images/Test100Episodes.jpeg" height="313">
+
+The same experiment can be done using:
+```
+python TestAgent.py
+```
+
+
