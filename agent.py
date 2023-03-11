@@ -28,11 +28,7 @@ class Agent:
         self.learning_rate = learning_rate
         self.qnetwork = QNetwork(self.n_states, self.n_actions, seed).to(self.device)
         self.target_qnetwork = QNetwork(self.n_states, self.n_actions, seed).to(self.device)
-        if load_weights is not None:
-            self.target_qnetwork.load_state_dict(torch.load(load_weights))
-            self.qnetwork.load_state_dict(torch.load(load_weights))
-        else:
-            self.target_qnetwork.load_state_dict(self.qnetwork.state_dict())
+        self.target_qnetwork.load_state_dict(self.qnetwork.state_dict())
         self.optimizer = torch.optim.Adam(self.qnetwork.parameters(), lr=learning_rate)
 
         # Experience replay
@@ -40,6 +36,10 @@ class Agent:
         self.buffer_size = buffer_size
         self.batch_size = batch_size
         self.experience = namedtuple('experience', ['state', 'action', 'reward', 'next_state', 'done'])
+
+    def load_weights(self, file_path):
+        self.target_qnetwork.load_state_dict(torch.load(file_path))
+        self.qnetwork.load_state_dict(torch.load(file_path))
 
     def update_target_qnetwork(self):
         """
