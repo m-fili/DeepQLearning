@@ -13,16 +13,18 @@ brain_name = env.brain_names[0]
 brain = env.brains[brain_name]
 
 # load the weights from file
-agent = Agent(env, gamma=0.99, buffer_size=100000, batch_size=64, learning_rate=5e-4, train_mode=False)
-agent.qnetwork.load_state_dict(torch.load('checkpoint.pth'))
+agent = Agent(env, gamma=0.99, buffer_size=100000, batch_size=64, learning_rate=5e-4, train_mode=True)
+agent.load_weights('checkpoint.pth')
 
-env_info = env.reset(train_mode=True)[brain_name]
-state = env_info.vector_observations[0]
 eps = 0.05
 scores = []
 
 for episode in range(100):
+
     score = 0
+    env_info = env.reset(train_mode=True)[brain_name]
+    state = env_info.vector_observations[0]
+
     while True:
         action = agent.take_action(state, eps)
         env_info = env.step(action)[brain_name]
@@ -36,11 +38,16 @@ for episode in range(100):
             break
 
     scores.append(score)
+    print(f'Episode {episode:2}/100 is done (avg. score={np.mean(scores):.2f})', end='\r')
+
+
+env.close()
 
 print("Average Score in 100 consecutive episodes: {}".format(np.mean(scores)))
 
 
-plt.plot(range(1, 101), scores)
+plt.plot(range(1, 101), scores, color='blue', alpha=0.85)
+plt.hlines(y=np.mean(scores), xmin=1, xmax=100, linestyles='--', color='red', alpha=0.8)
 plt.title('Scores in 100 Episodes')
 plt.xlabel('Episode')
 plt.ylabel('Total Reward')
