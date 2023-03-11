@@ -1,5 +1,4 @@
 import numpy as np
-import torch
 from agent import Agent
 from unityagents import UnityEnvironment
 import matplotlib.pyplot as plt
