@@ -32,7 +32,7 @@ n_episodes = 1800, min_epsilon = 0.05, epsilon_decay = 0.995,
 The agent exceeded the target score (15.0) in 687 episodes! Here is the scores collected
 in each episode during the training phase:
 
-<img src="Images/TrainingPlot.png" height="313">
+<img src="Images/Training_Plot.png" height="313">
 
 
 
