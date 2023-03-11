@@ -25,3 +25,9 @@ To optimize the weights, I used Adam optimizer with a learning rate of 0.0005.
 n_episodes = 1800, min_epsilon = 0.05, epsilon_decay = 0.995, 
         t_max = 10, epsilon = 1.0, update_target_frequency = 10, 
         update_main_frequency = 2
+
+
+
+
+### 4. Test for 100 Episodes
+Below
