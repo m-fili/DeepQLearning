@@ -4,8 +4,7 @@ import torch
 
 
 def dqn(env, agent, n_episodes=100, min_epsilon=0.05, epsilon_decay=0.999,
-        t_max=10, update_target_frequency=10,
-        update_main_frequency=2):
+        update_target_frequency=10, update_main_frequency=2):
 
     TARGET_SCORE = 200.0
     epsilon = 1.0
@@ -27,7 +26,7 @@ def dqn(env, agent, n_episodes=100, min_epsilon=0.05, epsilon_decay=0.999,
         # update epsilon value
         epsilon = max(min_epsilon, epsilon * epsilon_decay)
 
-        for t in range(t_max):
+        while True:
 
             # take action when in state S
             action = agent.take_action(s1, epsilon)
