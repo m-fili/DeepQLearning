@@ -50,3 +50,15 @@ python TestAgent.py
 ```
 
 
+### 6. Future Improvements
+In this project, a Deep Q-learning algorithm is utilized to train the agent. This 
+implementation  incorporates experience replay and fixed target approach to improve 
+the original idea. However,  there are different ways that the results can be improved. 
+Example of such solutions are:
+
+* Prioritized experience replay
+* Double Q-learning
+* Dueling networks
+* Noisy nets
+* Rainbow
+
